@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>example-modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-item>
+    <ion-input placeholder="Enter Name" [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input placeholder="Enter Email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Enter Phone" [(ngModel)]="user.phone"></ion-input>
+      </ion-item>
+  <ion-item>
+        <ion-input placeholder="Select Stream" [(ngModel)]="user.stream"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input placeholder="Select Gender" [(ngModel)]="user.gender"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="About You" [(ngModel)]="user.about"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-input placeholder="Experience" [(ngModel)]="user.experience"></ion-input>
+</ion-item>
+      
+  <ion-button expand="block" *ngIf="! userID" (click)="save()">Add Student</ion-button>
+  <ion-button expand="block" *ngIf=" userID" (click)="update()">Update Student</ion-button>
+  <ion-button expand="block" (click)="delete()" color=danger>Delete</ion-button>
+  <ion-button expand="block" color=warning (click)="closeModal()">Close Modal</ion-button>
+  
+  
+   
+
+</ion-content>
